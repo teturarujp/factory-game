@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://13pxvo0oyyrh"]
+[gd_scene load_steps=3 format=3 uid="uid://13pxvo0oyyrh"]
+
+[ext_resource type="PackedScene" uid="uid://c4l2sqirmokku" path="res://player.tscn" id="1_ig7tw"]
 
 [sub_resource type="TileSet" id="TileSet_tmvkw"]
 
@@ -6,3 +8,8 @@
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_tmvkw")
+
+[node name="Player" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(404, 299)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
